@@ -17,31 +17,31 @@ def create_pdf_with_image(file_path,  barcode_text, image_path):
     # Crea un objeto canvas (lienzo) para dibujar en el PDF
     pdf_canvas = canvas.Canvas(file_path, pagesize=letter)
 
-    add_header(pdf_canvas, "Encabezado del Documento")
+    #ñadd_header(pdf_canvas, "Encabezado del Documento")
 
     # Establece la fuente en negrita
     pdf_canvas.setFont("Times-Bold", 10)  
     pdf_canvas.drawString(50, 700, "Fecha :")
     pdf_canvas.setFont("Times-Roman", 10)  
-    pdf_canvas.drawString(150, 700, "MARTES, 17 DE OCTUBRE DE 2023")
+    pdf_canvas.drawString(150, 700, "MARTES, 05 DE DICIEMBRE DE 2023")
 
     pdf_canvas.setFont("Times-Bold", 10)  
     pdf_canvas.drawString(50, 680, "Paciente : ")
     pdf_canvas.setFont("Times-Roman", 10) 
-    pdf_canvas.drawString(150, 680, "PACIENTE DE PRUEBA ")
+    pdf_canvas.drawString(150, 680, "DULCE MARIA DE LA PAZ PATERNO 3 MATERNO 3")
 
     pdf_canvas.setFont("Times-Bold", 10)  
     pdf_canvas.drawString(50, 660, "Edad :")
 
     pdf_canvas.setFont("Times-Roman", 10)  
-    pdf_canvas.drawString(150, 660, "0 AÑOS ")
+    pdf_canvas.drawString(150, 660, "40 AÑOS")
 
     pdf_canvas.setFont("Times-Bold", 10)  
     pdf_canvas.drawString(400, 660, "Fecha de Nacimiento : ")
     
 
     pdf_canvas.setFont("Times-Roman", 10)  
-    pdf_canvas.drawString(500, 660, "17/OCT/2023 ")
+    pdf_canvas.drawString(500, 660, "24/ENE./1983 ")
 
     pdf_canvas.setFont("Times-Bold", 10)  
     pdf_canvas.drawString(50, 640, "Sexo :")
@@ -59,13 +59,13 @@ def create_pdf_with_image(file_path,  barcode_text, image_path):
     pdf_canvas.drawString(50, 620, "Sucursal :")
 
     pdf_canvas.setFont("Times-Roman", 10) 
-    pdf_canvas.drawString(150, 620, "VILLAHERMOSA GREGORIO MENDEZ ")
+    pdf_canvas.drawString(150, 620, "AV DR RUPERTO PALIZA 87, PRIMER CUADRO")
 
     pdf_canvas.setFont("Times-Bold", 10)  
     pdf_canvas.drawString(50, 600, "Nombre del estudio :")
 
     pdf_canvas.setFont("Times-Roman", 10) 
-    pdf_canvas.drawString(150, 600, "_________________________")
+    pdf_canvas.drawString(150, 600, "DENSITOMETRIA OSEA DE COLUMNA Y FEMUR")
 
    
     draw_underlined_text(pdf_canvas, 50, 570, "Indicación del estudio")
@@ -130,11 +130,11 @@ def create_pdf_with_image(file_path,  barcode_text, image_path):
 
 
     pdf_canvas.setFont("Times-Bold", 10)  
-    pdf_canvas.drawString(230, 150, "         ATENTAMENTE:")
-    pdf_canvas.drawString(230, 115, "      NOMBRE DE MEDICO ")
-    pdf_canvas.drawString(230, 100, "    UNIVERSIDAD DE PRUEBA ")
-    pdf_canvas.drawString(230, 85, "         CED.PROF. 1111111")
-    pdf_canvas.drawString(230, 70, "      ULTRASONOGRAFISTA  ")
+    pdf_canvas.drawString(250, 150, "ATENTAMENTE:")
+    pdf_canvas.drawString(210, 115, "ROSA IMELDA FLORES ONTIVEROS ")
+    pdf_canvas.drawString(205, 100, "UNIVERSIDAD AUTÓNOMA DE SINALOA ")
+    pdf_canvas.drawString(250, 85,  "CED.PROF. 4247840")
+    pdf_canvas.drawString(240, 70,  "ULTRASONOGRAFISTA  ")
 
 
 
@@ -151,7 +151,7 @@ def create_pdf_with_image(file_path,  barcode_text, image_path):
 
 
     #add_footer(pdf_canvas, "Pie de Pagina")
-    ruta_firma = "C:\\PdfPython\\firma.jpg"
+    ruta_firma = "C:\\PdfPython\\Imagenes\\firma.jpg"
     # Agrega la imagen al PDF
     image = ImageReader(ruta_firma)
     pdf_canvas.drawImage(image, 260, 125, width=50, height=25)  # Ajusta las coordenadas y el tamaño según tus necesidades
@@ -233,7 +233,7 @@ if __name__ == "__main__":
     texto_codigo_barras = "*RSV123456789*"
 
     # Ruta de la imagen
-    ruta_imagen = "C:\\PdfPython\\Spearker.png"
+    ruta_imagen = "C:\\PdfPython\\Imagenes\\Spearker.png"
     
 
 
